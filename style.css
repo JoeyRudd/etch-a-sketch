@@ -4,16 +4,59 @@ body {
 
 .body {
   display: flex;
+  flex: wrap;
   flex-direction: column;
   align-items: center;
 }
 
+.sizeChange {
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  font-family:'Nintendoid1';
+  text-align: center;
+  width: 800px;
+  height: 60px;
+  border-width: 4px;
+  border: solid;
+  border-color: #E5243F;
+  background-color: #F65C51;
+  font-size: 20px;
+  color:#2F5755;
+}
+
+.sizeChange h2 {
+  font-size: 20px;
+  justify-self: center;
+}
+
+.sizeChange p{
+  margin: 0px;
+}
+
+.sizeChange button{
+  width: 142px;
+  height: 50px;
+  background-color: #54C6BE;
+  font-family: 'Nintendoid1';
+  font-size: 20px;
+  color:#2F5755;
+  border: solid;
+  border-width: 4px;
+  border-color: #E5243F;
+}
+
 .board{
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   display: grid;
 }
 
+.square:hover {
+  background-color: #FFFF99;
+}
 
 .board div{
   border: solid;
@@ -29,8 +72,8 @@ body {
 }
 
 .buttons button  {
-  width: 142px;
-  height: 40px;
+  width: 195px;
+  height: 50px;
   background-color: #F65C51;
   font-family: 'Nintendoid1';
   font-size: 20px;
@@ -38,6 +81,10 @@ body {
   border: solid;
   border-width: 4px;
   border-color: #E5243F;
+}
+
+button:hover {
+  box-shadow: 2px 2px #2F5755;
 }
 
 h1 {

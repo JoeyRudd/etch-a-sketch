@@ -1,6 +1,38 @@
 // board starts as 16x16
 createGrid(16)
 
+let boardDraw = true;
+
+// enter and exit drawing mode
+boardClick.addEventListener("click", () => {
+    if(boardDraw === true) {
+        boardDraw = false;
+    }
+     else {
+        boardDraw = true;
+    }
+})
+
+// apply size change
+sizeApply.addEventListener("click", () => {
+    let slider = document.querySelector(".slider");
+    changeSize(slider.value);
+})
+
+// square color black
+black.addEventListener("click", () => {
+    squareColor = "black";
+})
+
+// square color white
+eraser.addEventListener("click", () => {
+    squareColor = "white";
+})
+
+random.addEventListener("click", () => {
+    randomColor();
+})
+
 let squareColor = "black";
 let draw = true;
 
@@ -27,7 +59,7 @@ function createGrid(size){
 
         // set background color to white
         square.style.backgroundColor = "white";
-
+        
         // when mouse is over square make it colorSquare
         square.addEventListener("mouseover", colorSquare)
 
@@ -36,23 +68,8 @@ function createGrid(size){
 
         // resets grid
         reset.addEventListener("click", () => {
-            square.style.backgroundColor = "white";
+        square.style.backgroundColor = "white";
         })
-
-        // square color black
-        black.addEventListener("click", () => {
-            squareColor = "black";
-        })
-
-        // square color white
-        eraser.addEventListener("click", () => {
-            squareColor = "white";
-        })
-
-        random.addEventListener("click", () => {
-            randomColor();
-        })
-        
     }
     
 }
@@ -72,7 +89,9 @@ function changeSize(input){
 
 // colors square
 function colorSquare() {
-    this.style.backgroundColor = squareColor;
+    if(boardDraw === true) {
+        this.style.backgroundColor = squareColor; 
+    }
 }
 
 function randomColor() {

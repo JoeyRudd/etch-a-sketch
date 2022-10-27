@@ -12,17 +12,24 @@
     <div class="body">
         <div class="title"><h1>Etch-a-Sketch</h1></div>
             <div class="content"></div>
-                <div class="board"></div>
+                <div class="board" id="boardClick"></div>
                 <div class="buttons">
                     <button id="black">Black</button>
                     <button id="eraser">Eraser</button>
                     <button id="random">Random</button>
                     <button id="reset">Reset</button>
                 </div>
-                <div>
-                    <h2>Grid Size</h2>
-                    <p id="gridSize">16</p>
-                    <input type="range" min="2" max="100" value="16" class="slider" onchange="changeSize(this.value)" oninput="gridSize.innerText = this.value">
+                <div class="sizeChange">
+                    <div>
+                        <h2>Grid Size</h2>
+                    </div>
+                    <div>
+                        <p><label id="gridSize">16</label></p>
+                        <input id="slider" type="range" min="2" max="100" value="16" class="slider" oninput="gridSize.innerText = this.value">
+                    </div>
+                    <div>
+                        <button id="sizeApply">Apply</button>
+                    </div>
                 </div>
 
     </div>
