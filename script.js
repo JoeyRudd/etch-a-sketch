@@ -1,5 +1,5 @@
 // board starts as 16x16
-createGrid(16)
+createGrid(16);
 
 let boardDraw = true;
 
