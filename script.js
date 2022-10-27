@@ -6,7 +6,7 @@ let draw = true;
 
 //creates board
 function createGrid(size){
-   
+
     // selecting the board
     let grid = document.querySelector(".board");
 
@@ -52,7 +52,7 @@ function createGrid(size){
         random.addEventListener("click", () => {
             randomColor();
         })
-    
+        
     }
     
 }

@@ -13,15 +13,17 @@
         <div class="title"><h1>Etch-a-Sketch</h1></div>
             <div class="content"></div>
                 <div class="board"></div>
-                    <div class="buttons">
-                        <button id="black">Black</button>
-                        <button id="eraser">Eraser</button>
-                        <button id="random">Random</button>
-                        <button id="reset">Reset</button>
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
-                    </div>
+                <div class="buttons">
+                    <button id="black">Black</button>
+                    <button id="eraser">Eraser</button>
+                    <button id="random">Random</button>
+                    <button id="reset">Reset</button>
+                </div>
+                <div>
+                    <h2>Grid Size</h2>
+                    <p id="gridSize">16</p>
+                    <input type="range" min="2" max="100" value="16" class="slider" onchange="changeSize(this.value)" oninput="gridSize.innerText = this.value">
+                </div>
 
     </div>
     
